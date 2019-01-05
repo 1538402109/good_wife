@@ -20,14 +20,16 @@
 
                     <th>@lang('global.customer-list.fields.name')</th>
                     <th>@lang('global.customer-list.fields.phone')</th>
+                    <th>@lang('global.customer-list.fields.mobile')</th>
                     <th>@lang('global.customer-list.fields.address')</th>
                     <th>@lang('global.customer-list.fields.goods')</th>
+                    <th>@lang('global.customer-list.fields.total_price')</th>
                     <th>@lang('global.customer-list.fields.pay_money')</th>
+                    <th>@lang('global.customer-list.fields.un_pay_money')</th>
                     <th>@lang('global.customer-list.fields.status')</th>
                     <th>@lang('global.customer-list.fields.vipflag')</th>
                     <th>@lang('global.customer-list.fields.created_at')</th>
                     <th>&nbsp;</th>
-
                 </tr>
                 </thead>
 
@@ -39,11 +41,14 @@
 
                             <td>{{ $customer->name }}</td>
                             <td>{{ $customer->phone }}</td>
+                            <td>{{ $customer->mobile }}</td>
                             <td>{{ $customer->address }}</td>
                             <td>{{ $customer->goods_id }}</td>
+                            <td>{{ $customer->total_price }}</td>
                             <td>{{ $customer->pay_money }}</td>
-                            <td>{{ $customer->status }}</td>
-                            <td>{{ $customer->vipflag }}</td>
+                            <td>{{ $customer->total_price - $customer->pay_money }}</td>
+                            <td>{{ $customer->pay_status }}</td>
+                            <td>{{ $customer->isvip }}</td>
                             <td>{{ $customer->created_at }}</td>
                             <td>
                                 <a href="{{ route('customers.edit',[$customer->id]) }}" class="btn btn-xs btn-info">@lang('global.app_edit')</a>

@@ -30,3 +30,5 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 Route::resource('customers','CustomersController');
 Route::get('complete','CustomersController@complete')->name('customers.complete');
 Route::get('uncomplete','CustomersController@uncomplete')->name('customers.uncomplete');
+
+Route::resource('categorys','CategoryController');
