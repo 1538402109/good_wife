@@ -18,7 +18,7 @@
                     <th>@lang('global.customer-list.fields.phone')</th>
                     <th>@lang('global.customer-list.fields.address')</th>
                     <th>@lang('global.customer-list.fields.goods')</th>
-                    <th>@lang('global.customer-list.fields.pay_money')</th>
+                    <th>@lang('global.customer-list.fields.un_pay_money')</th>
                     <th>@lang('global.customer-list.fields.status')</th>
                     <th>@lang('global.customer-list.fields.vipflag')</th>
                     <th>@lang('global.customer-list.fields.created_at')</th>
@@ -35,9 +35,9 @@
                             <td>{{ $uncomplete->phone }}</td>
                             <td>{{ $uncomplete->address }}</td>
                             <td>{{ $uncomplete->goods_id }}</td>
-                            <td>{{ $uncomplete->pay_money }}</td>
-                            <td>{{ $uncomplete->status }}</td>
-                            <td>{{ $uncomplete->vipflag }}</td>
+                            <td>{{ $uncomplete->total_price - $uncomplete->pay_money }}</td>
+                            <td>{{ $uncomplete->pay_status }}</td>
+                            <td>{{ $uncomplete->isvip }}</td>
                             <td>{{ $uncomplete->created_at }}</td>
 
                         </tr>

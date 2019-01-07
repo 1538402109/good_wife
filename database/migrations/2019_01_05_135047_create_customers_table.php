@@ -15,14 +15,16 @@ class CreateCustomersTable extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('phone',13);
-            $table->string('address');
-            $table->string('goods_id');
-            $table->string('pay_money');
-            $table->integer('status')->default(0);
-            $table->integer('vipflag')->default(0);
-            $table->integer('delflag')->default(0);
+            $table->string('name',20);
+            $table->string('phone',20);
+            $table->string('mobile',20)->nullabel();
+            $table->string('goods_id',255);
+            $table->string('address',255);
+            $table->string('totap_price',100)->default(0);
+            $table->string('pay_money',100)->default(0);
+            $table->tinyInteger('pay_status')->default(0);
+            $table->tinyInteger('isvip')->default(0);
+            $table->tinyInteger('delflag')->default(0);
             $table->timestamps();
         });
     }

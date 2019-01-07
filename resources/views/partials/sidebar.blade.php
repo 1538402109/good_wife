@@ -80,20 +80,11 @@
                             </span>
                         </a>
                     </li>
-                    <li class="{{ $request->segment(2) == 'roles' ? 'active active-sub' : '' }}">
+                    <li class="{{ $request->segment(1) == 'uncomplete' ? 'active active-sub' : '' }}">
                         <a href="{{ route('customers.uncomplete') }}">
                             <i class="fa fa-briefcase"></i>
                             <span class="title">
                                 @lang('global.customer-uncomplete-fee.title')
-                            </span>
-                        </a>
-                    </li>
-
-                    <li class="{{ $request->segment(2) == 'users' ? 'active active-sub' : '' }}">
-                        <a href="{{ route('admin.users.index') }}">
-                            <i class="fa fa-user"></i>
-                            <span class="title">
-                                @lang('global.customer-pay.title')
                             </span>
                         </a>
                     </li>
@@ -113,8 +104,8 @@
                 </a>
                 <ul class="treeview-menu">
 
-                    <li class="{{ $request->segment(2) == 'users' ? 'active active-sub' : '' }}">
-                        <a href="{{ route('admin.users.index') }}">
+                    <li class="{{ $request->segment(1) == 'categorys' ? 'active active-sub' : '' }}">
+                        <a href="{{ route('categorys.index') }}">
                             <i class="fa fa-user"></i>
                             <span class="title">
                                 @lang('global.category-list.title')

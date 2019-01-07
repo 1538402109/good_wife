@@ -95,7 +95,7 @@ class CustomersController extends Controller
 
     public function complete(Request $request)
     {
-        $completes = Customer::where('status',1)->get();
+        $completes = Customer::where('pay_status',1)->get();
 
         return view('customer.complete',compact('completes'));
     }
@@ -103,7 +103,7 @@ class CustomersController extends Controller
 
     public function uncomplete(Request $request)
     {
-        $uncompletes = Customer::where('status',2)->get();
+        $uncompletes = Customer::where('pay_status',2)->get();
 
         return view('customer.uncomplete',compact('uncompletes'));
     }

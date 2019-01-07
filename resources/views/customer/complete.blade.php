@@ -36,8 +36,8 @@
                             <td>{{ $complete->address }}</td>
                             <td>{{ $complete->goods_id }}</td>
                             <td>{{ $complete->pay_money }}</td>
-                            <td>{{ $complete->status }}</td>
-                            <td>{{ $complete->vipflag }}</td>
+                            <td>{{ $complete->pay_status }}</td>
+                            <td>{{ $complete->isvip }}</td>
                             <td>{{ $complete->created_at }}</td>
 
                         </tr>
